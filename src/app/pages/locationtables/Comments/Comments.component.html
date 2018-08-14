@@ -1,0 +1,21 @@
+<nb-card>
+        <nb-card-header>
+
+          <div class="row">
+              <div class="col-md-4">
+                  Comments Table
+                </div>
+              
+              <div class="col-md-2 offset-md-10">
+                <button class="btn btn-hero-success btn-demo" (click)="GetApproved()">{{buttonText}}</button>
+        
+              </div>
+            </div>
+        </nb-card-header>
+      
+        <nb-card-body>
+          <ng2-smart-table [settings]="settings" [source]="source" (userRowSelect)="Flip($event)">
+          </ng2-smart-table>
+        </nb-card-body>
+      </nb-card>
+      

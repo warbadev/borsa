@@ -1,0 +1,207 @@
+<div class="modal-header">
+  <span>{{ data.AR_name}}</span>
+  <button class="close" aria-label="Close" (click)="closeModal()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <nb-tabset>
+    <nb-tab tabTitle="Basic Info">
+      <div class="row">
+        <div class="col-lg-12">
+          <nb-card>
+            <nb-card-header>Name Inputs</nb-card-header>
+            <nb-card-body>
+
+              <div class="row full-name-inputs">
+                <div class="col-sm-6 form-group">
+                  <label for="AR_name">Arabic Name</label>
+                  <input type="text" id="AR_name" [(ngModel)]="data.AR_name" placeholder="Arabic Name" class="form-control" />
+                </div>
+                <div class="col-sm-6 form-group">
+                  <label for="EN_name">English Name</label>
+                  <input type="text" id="EN_name" [(ngModel)]="data.EN_name" placeholder="English Name" class="form-control" />
+                </div>
+              </div>
+            </nb-card-body>
+          </nb-card>
+          <nb-card>
+            <nb-card-header>Location Inputs</nb-card-header>
+            <nb-card-body>
+
+              <div class="row full-name-inputs">
+                <div class="col-sm-6 form-group">
+                  <label for="Lat">Latitude</label>
+                  <input type="text" id="Lat" [(ngModel)]="data.Lat" placeholder="Latitude" class="form-control" />
+                </div>
+                <div class="col-sm-6 form-group">
+                  <label for="Lng">Longititude</label>
+                  <input type="text" id="Lng" [(ngModel)]="data.Lng" placeholder="Longititude" class="form-control" />
+                </div>
+              </div>
+            </nb-card-body>
+          </nb-card>
+
+          <nb-card>
+            <nb-card-header>Description Inputs</nb-card-header>
+            <nb-card-body>
+
+              <div class="row full-name-inputs">
+                <div class="col-sm-6 form-group">
+                  <label for="AR_desc">Arabic Description</label>
+                  <textarea rows="5" id="AR_desc" placeholder="Arabic Description" [(ngModel)]="data.AR_desc" class="form-control"></textarea>
+
+                </div>
+                <div class="col-sm-6 form-group">
+                  <label for="EN_desc">English Description</label>
+                  <textarea rows="5" id="EN_desc" placeholder="English Description" [(ngModel)]="data.EN_desc" class="form-control"></textarea>
+
+                </div>
+              </div>
+            </nb-card-body>
+          </nb-card>
+
+        </div>
+
+      </div>
+    </nb-tab>
+    <nb-tab tabTitle="Images">
+      <div class="row">
+        <div class="col-lg-12">
+          <nb-card>
+            <nb-card-header>Images 1</nb-card-header>
+            <nb-card-body>
+                <div class="row">
+                  <div class="col">
+                    <img class="image"  [src]="data.Image.image1"/>
+              </div></div>
+              <div class="row ">
+                <div class=" input-group">
+                  
+                  <input type="file" id="fImage" ng2FileSelect [uploader]="image1" placeholder="Front Image" class="form-control" />
+                  <span class="input-group-append">
+                        <button class="btn btn-danger input-group-text" (click)="image1.uploadAll()" 
+                        [disabled]="!image1.getNotUploadedItems().length">
+                                Upload
+                        </button>
+                      </span>
+                </div>
+                
+              </div>
+</nb-card-body>
+</nb-card>
+<nb-card>
+  <nb-card-header>Image 2</nb-card-header>
+  <nb-card-body>
+      <div class="row">
+          <div class="col">
+              <img class="image" [src]="data.Image.image2"/>
+
+          </div>
+            </div>
+
+             <div class="row ">
+                <div class="col input-group">
+                  
+                  <input type="file" id="Image2" ng2FileSelect [uploader]="image2" placeholder="2nd Image" class="form-control" />
+                  <span class="input-group-append">
+                        <button class="btn btn-danger input-group-text" (click)="image2.uploadAll()" 
+                        [disabled]="!image2.getNotUploadedItems().length">
+                                Upload
+                        </button>
+                      </span>
+                </div>
+               
+              </div>
+</nb-card-body>
+</nb-card>
+<nb-card>
+  <nb-card-header>Image 3</nb-card-header>
+  <nb-card-body>
+      <div class="row">
+          <div class="col">
+              <img class="image" [src]="data.Image.image3"/>
+
+            </div>
+            </div>
+
+              <div class="row ">
+                <div class=" input-group">
+                  
+                  <input type="file" id="Image3" ng2FileSelect [uploader]="image3" placeholder="3rd Image" class="form-control" />
+                  <span class="input-group-append">
+                        <button class="btn btn-danger input-group-text" (click)="image3.uploadAll()" 
+                        [disabled]="!image3.getNotUploadedItems().length">
+                                Upload
+                        </button>
+                      </span>
+                </div>
+                <div class="col-sm-6">
+                </div>
+              </div>
+              </nb-card-body>
+              </nb-card>
+              <nb-card>
+                <nb-card-header>Image 5</nb-card-header>
+                <nb-card-body>
+<div class="row">
+  <div class="col">
+    <img class="image" [src]="data.Image.image4"/>
+</div>
+</div>
+              <div class="row ">
+                <div class="col input-group">
+                  
+                  <input type="file" id="Image4" ng2FileSelect [uploader]="image4" placeholder="4th Image" class="form-control" />
+                  <span class="input-group-append">
+                        <button class="btn btn-danger input-group-text" (click)="image4.uploadAll()" 
+                        [disabled]="!image4.getNotUploadedItems().length">
+                                Upload
+                        </button>
+                      </span>
+                </div>
+               
+              </div>
+</nb-card-body>
+</nb-card>
+<nb-card>
+  <nb-card-header>Image 6</nb-card-header>
+  <nb-card-body>
+      <div class="row">
+          <div class="col">
+              <img class="image" [src]="data.Image.image5"/>
+
+            </div>
+            </div>
+              <div class="row ">
+                <div class="col input-group">
+                  
+                  <input type="file" id="Image5" ng2FileSelect [uploader]="image5" placeholder="5th Image" class="form-control" />
+                  <span class="input-group-append">
+                        <button class="btn btn-danger input-group-text" (click)="image5.uploadAll()" 
+                        [disabled]="!image5.getNotUploadedItems().length">
+                                Upload
+                        </button>
+                      </span>
+                </div>
+            
+              </div>
+            </nb-card-body>
+
+          </nb-card>
+        </div>
+      </div>
+
+    </nb-tab>
+  </nb-tabset>
+
+
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-md btn-primary" *ngIf="parameter.action "   (click)="create()">Create record</button>
+
+  <button class="btn btn-md btn-primary" *ngIf="!parameter.action "  (click)="save()">Save record</button>
+  <button class="btn btn-md btn-danger" *ngIf="!parameter.action " (click)="Delete()">Delete record</button>
+
+</div>

@@ -1,0 +1,31 @@
+<nb-card>
+  <nb-card-header>
+    <div class="row">
+      <div class="col-md-4">
+        Location Table
+      </div>
+      
+      <div class="col-md-2 offset-md-10">
+        <button class="btn btn-hero-success btn-demo" (click)="Open('',true)">Create</button>
+
+      </div>
+    </div>
+  </nb-card-header>
+  <nb-card-body>
+      <nb-card>
+          <nb-card-header>Selects</nb-card-header>
+          <nb-card-body>
+            <div class="form-group">
+              <label>Simple Select</label>
+              <select class="form-control" (change)="SubLocations()"  [(ngModel)]="area">
+                <option *ngFor="let area of areas" [ngValue]="area._id" > {{area.AR_name}} / {{area.EN_name}} </option>
+
+              </select>
+            </div>
+
+          </nb-card-body>
+        </nb-card>
+    <ng2-smart-table [settings]="settings" [source]="source" (userRowSelect)="Open($event,false)">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>

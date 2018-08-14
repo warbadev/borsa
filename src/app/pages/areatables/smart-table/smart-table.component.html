@@ -1,0 +1,17 @@
+<nb-card>
+  <nb-card-header>
+    <div class="row">
+      <div class="col-md-4">
+        Smart Table
+      </div>
+      <div class="col-md-2 offset-md-10">
+        <button class="btn btn-hero-success btn-demo" (click)="Open('',true)">Create</button>
+
+      </div>
+    </div>
+  </nb-card-header>
+  <nb-card-body>
+    <ng2-smart-table [settings]="settings" [source]="source" (userRowSelect)="Open($event,false)">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>

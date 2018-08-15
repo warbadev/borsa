@@ -2,7 +2,7 @@ const express = require('express'),
   path = require('path'),
   bodyParser = require('body-parser'),
   cors = require('cors'),
-  mongoose = require('mongoose'),
+  mongoose = require('mongoose');
   //config = require('/CONFIG/DB');
 
 var morgan = require('morgan');

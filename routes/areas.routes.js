@@ -4,7 +4,7 @@ const app = express();
 const AreasRoutes = express.Router();
 
 // Require AdUnit model in our routes module
-let Area = require('../models/Areas');
+let Area = require('../models/areas');
 
 // Defined store route
 AreasRoutes.route('/add').post(function (req, res) {

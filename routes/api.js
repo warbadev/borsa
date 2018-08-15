@@ -1,12 +1,15 @@
 var mongoose = require('mongoose');
 var passport = require('passport');
-var config = require('../config/db');
+//var config = require('../config/db');
 require('../config/passport')(passport);
 var express = require('express');
 var jwt = require('jsonwebtoken');
 var router = express.Router();
 var User = require("../models/user");
-
+var config ={
+  secret:'istanbul',
+  DB: 'mongodb://localhost:27017/istanbul'
+}
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.send('Express RESTful API');

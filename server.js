@@ -3,7 +3,7 @@ const express = require('express'),
   bodyParser = require('body-parser'),
   cors = require('cors'),
   mongoose = require('mongoose'),
-  config = require('/CONFIG/DB');
+  //config = require('/CONFIG/DB');
 
 var morgan = require('morgan');
 var passport = require('passport');
@@ -12,8 +12,11 @@ const fs = require('fs');
 const http = require('http');
 mongoose.Promise = require('bluebird');
 const socketIO = require('socket.io');
-
-mongoose.connect(config.DB, {
+var config ={
+  secret:'istanbul',
+  DB: 'mongodb://localhost:27017/istanbul'
+}
+mongoose.connect(config, {
   promiseLibrary: require('bluebird'),
   useNewUrlParser: true
 }).then(

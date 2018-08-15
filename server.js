@@ -13,10 +13,10 @@ const http = require('http');
 mongoose.Promise = require('bluebird');
 const socketIO = require('socket.io');
 var config ={
-  secret:"istanbul",
-  DB: "mongodb://localhost:27017/istanbul"
-}
-mongoose.connect(config, {
+    secret:'istanbul',
+    DB: 'mongodb://localhost:27017/istanbul'
+ }
+mongoose.connect(config.DB, {
   promiseLibrary: require('bluebird'),
   useNewUrlParser: true
 }).then(

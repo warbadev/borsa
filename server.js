@@ -3,8 +3,8 @@ const express = require('express'),
   bodyParser = require('body-parser'),
   cors = require('cors'),
   mongoose = require('mongoose'),
-  config = require('./CONFIG/DB');
-  
+  config = require('CONFIG/DB');
+
 var morgan = require('morgan');
 var passport = require('passport');
 const multer = require('multer');

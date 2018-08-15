@@ -14,7 +14,7 @@ mongoose.Promise = require('bluebird');
 const socketIO = require('socket.io');
 var config ={
   secret:'istanbul',
-  DB: 'mongodb://localhost:27017/istanbul'
+  DB: "mongodb://localhost:27017/istanbul"
 }
 mongoose.connect(config, {
   promiseLibrary: require('bluebird'),

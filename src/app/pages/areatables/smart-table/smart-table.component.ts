@@ -21,7 +21,7 @@ import { SmartTableService } from '../../../@core/data/smart-table.service';
 export class SmartTableComponent {
 
   a: Array<any>;
-  uri = 'http://localhost:4200/areas';
+  uri = 'http://localhost:4000/areas';
   settings = {
     mode: 'oncustom',
     actions: false,

@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var passport = require('passport');
-var config = require('../CONFIG/FB');
+var config = require('../CONFIG/DB');
 require('../CONFIG/passport')(passport);
 var express = require('express');
 var jwt = require('jsonwebtoken');

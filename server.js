@@ -31,8 +31,8 @@ mongoose.connect(config.DB, {
 
 
 var api = require('./routes/api');
-const LocationsRoutes = require('./routes/locations.routes');
-const LocationsCategoriesRoutes = require('./routes/locationsCategories.routes');
+const LocationsRoutes = require('./routes/Locations.routes');
+const LocationsCategoriesRoutes = require('./routes/LocationsCategories.routes');
 const AreasRoutes = require('./routes/areas.routes');
 const RatingLocationsRoutes = require("./routes/RatingLocation.routes");
 

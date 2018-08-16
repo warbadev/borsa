@@ -2,6 +2,7 @@
 /src
 /tmp
 /out-tsc
+/borsa
 
 # dependencies
 /node_modules

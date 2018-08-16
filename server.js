@@ -69,19 +69,19 @@ let upload = multer({
 });
 
  app.use(function (req, res, next) {
-  //res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200/');
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
   
-  req.forwardedSecure = (req.headers["x-forwarded-proto"] == "https");
 
-  //res.setHeader('Access-Control-Allow-Methods', 'POST');
-  //res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-  //res.setHeader('Access-Control-Allow-Credentials', true);
+
+  res.setHeader('Access-Control-Allow-Methods', 'POST');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
   next();
 }); 
-app.use('/uploads', express.static(process.cwd() + '/uploads/'));
-app.use(express.static(path.join(__dirname, '/dist/')));
+app.use('/uploads', express.static(process.cwd() + '/uploads'));
+app.use(express.static(path.join(__dirname, 'dist')));
 
-app.get('*',(req,res) => res.sendFile(path.resolve(__dirname+'/dist/index.html')));
+app.get('*',(req,res) => res.sendFile(path.join(__dirname+'/dist/index.html')));
 app.get('/api', function (req, res) {
   res.end('file catcher example');
 });

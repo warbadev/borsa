@@ -79,7 +79,7 @@ let upload = multer({
   next();
 }); 
 app.use('/uploads', express.static(process.cwd() + '/uploads'));
-//app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'dist')));
 app.use(express.static('dist'));
 //app.use(express.static(__dirname + '/public'));
 

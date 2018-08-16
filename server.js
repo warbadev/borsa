@@ -48,8 +48,8 @@ const port = process.env.PORT || 4000;
 app.use(passport.initialize());
 
 app.use('/api', api);
-app.use('/locations', LocationsRoutes);
-app.use('/locationsCategories', LocationsCategoriesRoutes);
+app.use('/Locations', LocationsRoutes);
+app.use('/LocationsCategories', LocationsCategoriesRoutes);
 app.use('/RatingLocation', RatingLocationsRoutes);
 app.use('/areas', AreasRoutes);
 // app.use('/images',ImagesRoutes);
@@ -79,7 +79,7 @@ let upload = multer({
   next();
 }); 
 app.use('/uploads', express.static(process.cwd() + '/uploads'));
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, '/dist/')));
 
 app.get('*',(req,res) => res.sendFile(path.join(__dirname+'/dist/index.html')));
 app.get('/api', function (req, res) {
